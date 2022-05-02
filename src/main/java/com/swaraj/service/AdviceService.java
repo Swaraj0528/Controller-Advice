@@ -2,14 +2,17 @@ package com.swaraj.service;
 
 import org.springframework.stereotype.Service;
 
+import com.swaraj.UserException;
+
 @Service
 public class AdviceService {
 	
 	
 	public String demoMethod(String number){
-		
-		Integer num = Integer.parseInt(number);
-		return num.toString();
+		 throw new UserException("User Exception");
 	}
 
+	public void display() {
+		System.out.println("Do Nothing....");
+	}
 }
